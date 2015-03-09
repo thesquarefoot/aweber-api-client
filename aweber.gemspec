@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 	spec.email         = ["zachary.flower@pivotdesk.com"]
 	spec.summary       = %q{Ruby wrapper for the Aweber API}
 	spec.description   = %q{A Ruby wrapper for the Aweber REST API}
-	spec.homepage      = ""
+	spec.homepage      = "https://github.com/PivotDesk/aweber-api-client"
 	spec.license       = "MIT"
 
 	spec.files         = `git ls-files -z`.split("\x0")
