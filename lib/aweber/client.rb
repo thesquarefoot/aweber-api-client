@@ -14,11 +14,11 @@ module Aweber
 			end
 		end
 
-		include Aweber::Helpers
 		include Aweber::Request
 		include Aweber::Account
 		include Aweber::List
 		include Aweber::Subscriber
+		include Aweber::Helper
 		include Aweber::Connection
 
 		def initialize(attrs= {})

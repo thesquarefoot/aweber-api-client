@@ -10,5 +10,9 @@ module Aweber
 				raise ArgumentError.new "Invalid options (#{bad_opts.keys.join(', ')}) passed, only #{valid_opts} allowed."
 			end
 		end
+
+		def list_link(account_id, list_id)
+			"#{api_scheme}://#{api_host}/1.0/accounts/#{account_id}/lists/#{list_id}"
+		end
 	end
 end
