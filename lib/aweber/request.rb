@@ -23,8 +23,18 @@ module Aweber
 			respond(response)
 		end
 
+		# Performs patch request
+		def patch(path, params={})
+			response = connection.patch do |req|
+				req.url path
+				req.body = params unless params.empty?
+			end
+
+			respond(response)
+		end
+
 		def respond(response)
-			{:http_response_code => response.status}.merge(response.body)
+			response.body
 		end
 
 	end

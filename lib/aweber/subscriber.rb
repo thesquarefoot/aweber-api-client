@@ -41,5 +41,11 @@ module Aweber
 			post("1.0/accounts/#{account_id}/lists/#{list_id}/subscribers/#{subscriber_id}", {'ws.op' => 'archive'})
 		end
 
+		def update_subscriber(account_id, list_id, subscriber_id, options = {})
+			validate_options([:ad_tracking, :email, :last_folloup_message_number_sent, :misc_notes, :name, :status], options)
+
+			patch("1.0/accounts/#{account_id}/lists/#{list_id}/subscribers/#{subscriber_id}", options)
+		end
+
 	end
 end

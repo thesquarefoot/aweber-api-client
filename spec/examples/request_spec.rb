@@ -16,7 +16,7 @@ describe Aweber::Request do
 						:body =>  { :foo => 'bar' }
 					})
 
-					expect(client.respond(response)).to eq({:http_response_code => rcode, :foo => 'bar' })
+					expect(client.respond(response)).to eq({:foo => 'bar' })
 				end
 
 			end
