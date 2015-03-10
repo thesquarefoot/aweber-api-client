@@ -26,8 +26,9 @@ module Aweber
 		# Performs patch request
 		def patch(path, params={})
 			response = connection.patch do |req|
+				req.headers[:content_type] = 'application/json'
 				req.url path
-				req.body = params unless params.empty?
+				req.body = JSON.generate(params) unless params.empty?
 			end
 
 			respond(response)
