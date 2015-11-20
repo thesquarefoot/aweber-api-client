@@ -9,6 +9,10 @@ module Aweber
 			if bad_opts.any?
 				raise ArgumentError.new "Invalid options (#{bad_opts.keys.join(', ')}) passed, only #{valid_opts} allowed."
 			end
+
+			if opts[:custom_fields].is_a?(Hash)
+				opts[:custom_fields] = opts[:custom_fields].to_json
+			end
 		end
 
 		def list_link(account_id, list_id)
