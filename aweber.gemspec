@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
 	spec.add_development_dependency('rspec', '~> 2.4')
 
 	spec.add_runtime_dependency('faraday', '~> 0.9.0')
-	spec.add_runtime_dependency('faraday_middleware', '~> 0.9.0')
+	spec.add_runtime_dependency('faraday_middleware', '~> 0.10.0')
 
 	spec.add_runtime_dependency('json', '~> 1.8')
 	spec.add_runtime_dependency('simple_oauth', '~> 0.3.1')
